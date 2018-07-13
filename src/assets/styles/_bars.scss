@@ -1,0 +1,57 @@
+﻿.colorTool
+{
+    padding: .2em;
+    margin: ($base-margin/2);
+    background-color: rgba(0, 0, 0, .5);
+    display: inline-block;
+}
+
+.colorInner
+{
+    padding: 0em 11em 0em 0em;
+    display: inline-block;
+    transition: background-color .4s ease;
+    background-color: #2d2d2d;
+}
+
+.colorInner-text {
+    background-color: rgba(45, 45, 45, .85);
+}
+
+.input-group {
+    margin: $base-margin;
+    display: inline-block;
+}
+
+.colorTB
+{
+    border: none;
+    padding: ($base-margin/2) $base-margin;
+    font-size: 1.6em;
+    background-color: rgba(0, 0, 0, .3);
+    color: $light-color;
+    margin-right: ($base-margin/2);
+    text-transform: uppercase;
+}
+
+.shortTB
+{
+    width: 4em;
+}
+
+.initial-color
+{
+    background-color: $primary-color;
+}
+
+.mediumTB
+{
+    width: 6.5em;
+}
+
+.prefix
+{
+    font-size: 1.6em;
+    color: darken($light-color,20%);
+    margin-right: .4em;
+}
