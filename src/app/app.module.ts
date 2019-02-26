@@ -1,9 +1,10 @@
-import { BrowserModule } 				from '@angular/platform-browser';
-import { NgModule } 					from '@angular/core';
+import { BrowserModule } 		from '@angular/platform-browser';
+import { NgModule } 			from '@angular/core';
 
-import { AppComponent } 				from './app.component';
+import { AppComponent } 		from './app.component';
 
-import { ProfileService }				from './services/profile.service';
+import { ProfileService }		from './services/profile.service';
+import { MapService }			from './services/map.service';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ProfileService }				from './services/profile.service';
     BrowserModule
   ],
   providers: [
-  	ProfileService
+  	ProfileService,
+  	MapService
   ],
   bootstrap: [AppComponent]
 })

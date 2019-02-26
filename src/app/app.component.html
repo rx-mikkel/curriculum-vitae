@@ -1,5 +1,21 @@
 <a id="top"></a>
 <div class="header">
+    <div class="wrap group">
+        <div class="section">
+            <div class="sectionHeader group">
+                <h1>{{profile.userName}}</h1>
+            </div>
+            <div class="contact">
+                <h2>{{profile.title}}</h2>
+                <br>
+                <p>{{profile.phone}}</p>
+                <a href="mailto:{{profile.email}}">{{profile.email}}</a>
+            </div>
+            <div class="column">
+                <a style="font-size: 1em;" href="{{profile.linkedIn}}"><div class="extLink" id="linkedin"><p>LinkedIn</p></div></a>
+            </div>
+        </div>
+    </div>
     <div class="headerInner">
         <div class="bubble">
         </div>
@@ -7,28 +23,16 @@
 </div>
 
 <div class="wrap group">
-    <div class="section group section_left" style="border-top: none;">
-        <div class="sectionHeader group">
-            <h1>{{profile.userName}}</h1>
-        </div>
-        <div class="contact">
-            <h2>{{profile.title}}</h2>
-            <p>{{profile.phone}}</p>
-            <a href="mailto:{{profile.email}}">{{profile.email}}</a>
-        </div>
-        <div class="column">
-            <a style="font-size: 1em;" href="{{profile.linkedIn}}"><div class="extLink" id="linkedin"><p>LinkedIn</p></div></a>
-        </div>
-    </div>
+
 
     <div class="section_right">
         
         <div class="section" style="border-top: none;">
             <div class="sectionHeader group">
                 <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
-                <h2>Industry knowledge</h2>
+                <h2>Skills</h2>
             </div>
-            <div class="sectionContent group">
+            <div>
                 <div class="column">
                     <div *ngFor="let skill of profile.skills" class="skill">
                         <p>{{skill.name}}</p>
@@ -40,18 +44,16 @@
             </div>
         </div>
 
-        <div class="section" style="border-top: none;">
-            <div class="sectionHeader group">
+        <div class="section">
+            <div class="sectionHeader">
                 <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
-                <h2>Tools</h2>
+                <h2>Tools & tech</h2>
             </div>
-            <div class="sectionContent group">
-                <div class="column">
-                    <div *ngFor="let tool of profile.tools" class="skill">
-                        <p>{{tool.name}}</p>
-                        <div class="skillBar">
-                            <div class="skillInner" [style.background-color]="tool.barColor" [style.width]="tool.rating + '%'"></div>
-                        </div>
+            <div class="column">
+                <div *ngFor="let tool of profile.tools" class="skill">
+                    <p>{{tool.name}}</p>
+                    <div class="skillBar">
+                        <div class="skillInner" [style.background-color]="tool.barColor" [style.width]="tool.rating + '%'"></div>
                     </div>
                 </div>
             </div>
@@ -62,7 +64,7 @@
                 <div class="icon" style="background-image: url('/assets/images/lang.png');"></div>
                 <h2>Languages</h2>
             </div>
-            <div class="sectionContent group">
+            <div>
                 <div class="column">
                     <div *ngFor="let lang of profile.languages" class="skill">
                         <p>{{lang.name}}</p>
@@ -79,7 +81,7 @@
             <div class="icon" style="background-image: url(../assets/images/activities.png);"></div>
             <h2>Activities</h2>
         </div>
-        <div class="sectionContent group">
+        <div>
             <div class="column">
                 <h2 *ngFor="let activity of profile.activities">{{activity}}</h2>
             </div>
@@ -89,9 +91,7 @@
     </div>
 
     <div class="section section_left">
-        <div class="sectionContent">
-            {{profile.intro}}
-        </div>
+        <p *ngFor="let paragraph of profile.intro">{{paragraph}}</p>
     </div>
 
     <div class="section section_left">
@@ -99,7 +99,7 @@
             <div class="icon" style="background-image: url(assets/images/experience.png);"></div>
             <h2>Experience</h2>
         </div>
-        <div class="sectionContent">
+        <div>
             <h2>Praktikant</h2>
             <h3>Netto, Vesterbrogade Viborg</h3>
             <h4>Februar 2015</h4>
@@ -158,6 +158,10 @@
             <h3>Egeskovskolen i Bjerringbro</h3>
             <h4>Juni 2010</h4>
         </div>
+    </div>
+
+    <div class="section">
+        <div id="map" class="map"></div>
     </div>
 
 </div>

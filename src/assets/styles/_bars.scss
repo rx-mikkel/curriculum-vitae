@@ -55,3 +55,18 @@
     color: darken($light-color,20%);
     margin-right: .4em;
 }
+
+.skillBar {
+    border: 1px solid rgba(37, 112, 126, 0.4);
+    background-color: #2f5056;
+    width: 100%;
+    margin-bottom: 1.2em; 
+    box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, .4);
+}
+
+.skillInner {
+    border-right: 1px solid rgba(255, 255, 255, .6);
+    background-color: #9de0ad;
+    height: 1em;
+    box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .5);
+}

@@ -12,7 +12,11 @@ export class ProfileService {
 			phone: '+45 2687 8061',
 			email: 'mikkeloerum@gmail.com',
 			address: 'Zincksvej 7a, Godthåb',
-			intro: '<p>Long-ass text</p><p>Another paragraph</p>',
+			intro: [
+				'Focus on solving problems not implementing features.',
+				'I am a designer using code as my primary tool. I focus on building software for the end-user, using the technologies that enable me to do so most efficiently. I always think about the big picture before I start coding - it is not enough to be precise, accuracy is needed too in order to build the right solution well.',
+				'I focus on delivering great software that not only works well for the users, but ties in well with the overall business goals. I prefer to work closely with users to understand the challenges they face and come up with the best solutions in collaboration with them.',
+			],
 			linkedIn: 'https://www.linkedin.com/in/mikkeloerum/',
 			positions: [
 				{
@@ -30,16 +34,32 @@ export class ProfileService {
 			],
 			skills: [
 				{
-					name: 'Responsive webdesign',
-					rating: 100,
+					name: 'Problem solving',
+					rating: 100
 				},
 				{
-					name: 'Typography',
-					rating: 64
+					name: 'Usability',
+					rating: 96
+				},
+				{
+					name: 'Web development',
+					rating: 89,
 				},
 				{
 					name: 'Interaction design',
-					rating: 88
+					rating: 82
+				},
+				{
+					name: 'Graphic design',
+					rating: 70
+				},
+				{
+					name: 'Performance optimizations',
+					rating: 68
+				},
+				{
+					name: 'Responsive webdesign',
+					rating: 94,
 				}
 			],
 			tools: [
@@ -48,16 +68,28 @@ export class ProfileService {
 					rating: 93,
 				},
 				{
-					name: 'TypeScript',
-					rating: 81
-				},
-				{
 					name: 'HTML',
 					rating: 98
 				},
 				{
 					name: 'SASS',
-					rating: 99
+					rating: 100
+				},
+				{
+					name: 'Google Maps',
+					rating: 96
+				},
+				{
+					name: 'JavaScript',
+					rating: 92
+				},
+				{
+					name: 'TypeScript',
+					rating: 81
+				},
+				{
+					name: 'Git',
+					rating: 72
 				}
 			],
 			languages: [

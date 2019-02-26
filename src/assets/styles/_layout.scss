@@ -4,7 +4,7 @@
 
 body {
 	font-size: 10px;
-	color: #25707e;
+	color: #2f5056;
 	background-color: #dee8e8;
 	padding: 0em;
 	font-family: 'Roboto', sans-serif;
@@ -12,7 +12,7 @@ body {
 }
 
 p, a {
-	font-size: 1.6em;
+	font-size: 1.5em;
 	line-height: 1.6em;
 	margin: 0em; 
 }
@@ -23,6 +23,10 @@ p a {
 
 a, a:visited, a:hover {
 	color: #11acc3; 
+}
+
+p + p {
+	margin-top: 1.4em;
 }
 
 /* Layout */
@@ -39,7 +43,7 @@ a, a:visited, a:hover {
 }
 
 .headerInner {
-	height: 14em;
+	height: 4em;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 	position: relative; 
 }
@@ -55,7 +59,7 @@ a, a:visited, a:hover {
 	margin-left: -7.5em;
 	border: 3px solid #fff;
 	cursor: default; 
-  background-size: cover;
+ 	background-size: cover;
 }
 
 .footerBubble:hover {
@@ -63,9 +67,7 @@ a, a:visited, a:hover {
 }
 
 .section {
-	padding: 4em 1em;
-	border-top: 1px solid rgba(255, 255, 255, 0.45);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.04); 
+	padding: 4em 2em;
 
 	h1 {
 		font-size: 2.8em;
@@ -85,14 +87,14 @@ a, a:visited, a:hover {
 }
 
 .sectionHeader {
-	vertical-align: center;
-	margin-bottom: 2em; 
 
 	h2 {
-		font-size: 2.8em;
-		font-family: Century Gothic, sans-serif;
+		font-size: 2.5em;
 		font-weight: normal;
-		float: left; 
+		line-height: 52px;
+		display: inline-block;
+		margin: 0px;
+		vertical-align: top;
 	}	
 
 	.icon {
@@ -102,7 +104,7 @@ a, a:visited, a:hover {
 		border-radius: 50%;
 		background-color: #9de0ad;
 		border: .2em solid #fff;
-		float: left;
+		display: inline-block;
 		transition: background-color 1s ease; 
 
 		&:hover {
@@ -111,30 +113,8 @@ a, a:visited, a:hover {
 	}
 }
 
-.sectionContent {
-	padding: 0em .4em; 
-
-	> p {
-	margin-bottom: 1.4em; 
-	}
-
-	.contact {
-		padding: 0em .4em; 
-	}
-}
 .column {
-	float: left;
 	width: 100%; 
-}
-.skillBar {
-	border: 1px solid rgba(37, 112, 126, 0.4);
-	background-color: rgba(255, 255, 255, 0.45);
-	width: 100%;
-	margin-bottom: 1.2em; 
-}
-.skillInner {
-	background-color: #9de0ad;
-	height: 1.4em; 
 }
 .extLink {
 	height: 3.2em;
@@ -145,10 +125,12 @@ a, a:visited, a:hover {
 }
 
 #linkedin {
-  background-image: url(../images/linkedin.png); }
+	background-image: url(../images/linkedin.png); 
+}
 
 #behance {
-  background-image: url(../images/behance.png); }
+	background-image: url(../images/behance.png); 
+}
 
 .footer {
   background-color: #edf2f2;
@@ -160,25 +142,19 @@ a, a:visited, a:hover {
   position: relative; }
 
 .footerBubble {
-  width: 3.5em;
-  height: 3.5em;
-  position: absolute;
-  top: -1.7em;
-  left: 50%;
-  background-color: #08bd84;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  margin-left: -1.7em;
-  border: 2px solid #fff;
-  -webkit-transition: background-color 1s ease;
-  -moz-transition: background-color 1s ease;
-  -o-transition: background-color 1s ease;
-  transition: background-color 1s ease;
-  cursor: pointer;
-  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4); }
+	width: 3.5em;
+	height: 3.5em;
+	position: absolute;
+	top: -1.8em;
+	left: 50%;
+	background-color: #08bd84;
+	border-radius: 50%;
+	margin-left: -1.7em;
+	border: 2px solid #fff;
+	transition: background-color 1s ease;
+	cursor: pointer;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4); 
+}
 
 .section_right {
   display: none; }
@@ -187,14 +163,15 @@ a, a:visited, a:hover {
 
 /* Text */
 .stdText {
-  padding: .4em;
-  -moz-box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
-  font-size: 1.5em;
-  outline: none;
-  width: 12em;
-  border: 1px solid #aab; }
+	padding: .4em;
+	-moz-box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.1);
+	font-size: 1.5em;
+	outline: none;
+	width: 12em;
+	border: 1px solid #aab; 
+}
 
 .stdText:focus {
   border: 1px solid #aab; }
@@ -229,7 +206,7 @@ placeholder {
       display: block;
       float: right;
       width: 32em;
-      padding-left: 2em; }
+      padding-left: 4em; }
       .wrap .section_right .section {
         padding: 4em 0em; }
     .wrap .section_left {
@@ -240,66 +217,19 @@ placeholder {
     .wrap #skills, .wrap #languages, .wrap #activities {
       display: none; }
     .wrap .column {
-      float: left;
       width: 100%; }
     .wrap #education {
       border-bottom: none; } }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-/*
- * Image replacement
- */
-.ir {
-  background-color: transparent;
-  border: 0;
-  overflow: hidden;
-  /* IE 6/7 fallback */
-  *text-indent: -9999px; }
 
-.ir:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 100%; }
 
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
 .hidden {
   display: none !important;
-  visibility: hidden; }
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-.invisible {
   visibility: hidden; }
 
 .group:after {

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ProfileService }	from './services/profile.service';
+import { MapService }	from './services/map.service';
+
+declare var google: any;
 
 @Component({
   selector: 'app-root',
@@ -8,6 +11,7 @@ import { ProfileService }	from './services/profile.service';
 })
 export class AppComponent implements OnInit {
 	profile: any;
+	shapes: any;
 
 	color1 = {
 		red: 157,
@@ -20,14 +24,56 @@ export class AppComponent implements OnInit {
 		blue: 126
 	};
 
+	googleMap: any;
+	mapOptions = {
+		draggableCursor: '',
+		disableDefaultUI: true,
+		zoomControl: true,
+		controlSize: 32,
+		zoomControlOptions: {
+			position: google.maps.ControlPosition.LEFT_CENTER
+		},
+		center: {lat: 56.96807, lng: 9.81425129877266},
+		zoom: 18,
+		styles: [
+			{ "featureType": "transit", "stylers": [{ "visibility": "off" }] },
+			{ "stylers": [{ "saturation": -40 }, { "lightness": 20}] }
+		]
+	};
+
 	constructor(
-		private profileService: ProfileService
+		private profileService: ProfileService,
+		private mapService: MapService
 	) {}
 
 	ngOnInit() {
 		this.profile = this.profileService.getProfile();
+		this.shapes = this.mapService.getPolygons();
+
+		// firebase deploy
+		// draw all map polygons and markers
+		// Get experience and education done 
+		// finalize skills and tools
+		// get the 3 new bars implemented and update text accordingly (intro)
+		// header image and text on top
+		// Responsive is fucked
 
 		this.setSkillColors();
+
+		this.initMap();
+	}
+
+	initMap() {
+		this.googleMap = new google.maps.Map(document.getElementById('map'), this.mapOptions);
+
+		this.googleMap.addListener('click', function (e) {
+			let coords = [e.latLng.lng(), e.latLng.lat()];
+			console.log(coords);
+		});
+
+		for(let shape of this.shapes) {
+			this.drawPolygon(shape);
+		}
 	}
 
 	setSkillColors() {
@@ -53,5 +99,63 @@ export class AppComponent implements OnInit {
 
 		let resultColor = 'rgb(' + rCalc + ', ' + gCalc + ', ' + bCalc + ')';
 		return resultColor;
+	}
+
+	drawPolygon(shape) {
+		var self = this;
+
+		let polygon = this.newPolygon(shape.geometry);
+
+		polygon.setOptions(
+			{
+				fillColor: shape.color,
+				strokeColor: shape.outline,
+				zIndex: shape.zIndex,
+				clickable: false,
+				fillOpacity: shape.opacity
+			});
+
+		polygon.setMap(this.googleMap);
+
+		polygon.addListener('click', function () {
+
+		});
+
+		/*
+
+		roomPolygon.addListener('mouseover', function () {
+			if (this != self.selectedRoomPolygon) {
+				this.setOptions({ fillOpacity: .25, strokeWeight: 2 });
+			}
+		});
+
+		roomPolygon.addListener('mouseout', function () {
+			if (this != self.selectedRoomPolygon) {
+				this.setOptions({ fillOpacity: .0, strokeWeight: 0 });
+			}
+		});
+
+		*/
+
+		//this.roomsPolygonArray.push(roomPolygon);
+	}
+
+	newPolygon(geometry) {
+		let coords = [];
+		for(let polygon of geometry.coordinates) {
+			let poly = [];
+			for (let coordinatesArray of polygon) {
+				poly.push(new google.maps.LatLng(coordinatesArray[1], coordinatesArray[0]));
+			};
+			coords.push(poly);
+		}
+
+		let polygon = new google.maps.Polygon({
+			paths: coords,
+			strokeWeight: 2,
+			fillOpacity: 1
+		});
+
+		return polygon;
 	}
 }
