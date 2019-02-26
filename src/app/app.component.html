@@ -100,63 +100,32 @@
             <h2>Experience</h2>
         </div>
         <div>
-            <h2>Praktikant</h2>
-            <h3>Netto, Vesterbrogade Viborg</h3>
-            <h4>Februar 2015</h4>
-
-            <br />
-
-            <h2>Praktikant</h2>
-            <h3>Non-Food - Føtex, Viborg</h3>
-            <h4>November 2014 - Januar 2015</h4>
-
-            <br />
-
-            <h2>I lære</h2>
-            <h3>FOOD-afdelingen - Føtex, Silkeborg</h3>
-            <h4>1. August 2014 - 15 Oktober 2014</h4>
-
-            <br />
-
-            <h2>Ungarbejder</h2>
-            <h3>Netto, Bjerringbro</h3>
-            <h4>2012 - 2013</h4>
-            <p>Kassebetjening, vareopfyldning, kundeservice mm.</p>
+        	<div *ngFor="let position of profile.positions" class="experience">
+        		<h2>{{position.title}}</h2>
+        		<h3>{{position.company}}</h3>
+        		<h4>{{position.period}}</h4>
+        		<p *ngFor="let paragraph of position.description">{{paragraph}}</p>
+        	</div>
         </div>
     </div>
 
-    <div class="section section_left" id="education">
+    <div *ngIf="false" class="section section_left" id="education">
         <div class="sectionHeader group">
             <div class="icon" style="background-image: url(assets/images/education.png);"></div>
             <h2>Education</h2>
         </div>
-        <div class="sectionContent">
-            <h2>Gennemført modul a/b på hovedforløb</h2>
-            <h4>Januar 2015</h4>
-
-            <br>
-
-            <h2>Afslutter HG2</h2>
-            <h3>Handelsskolen Viborg</h3>
-            <h4>Juni 2014</h4>
-
-            <br>
-
-            <h2>Uddannet guide</h2>
-            <h3>Service & Co Guideskole i Spanien</h3>
-            <h4>November 2013</h4>
-
-            <br>
-
-            <h2>Afslutter 9. og 10. klasse</h2>
-            <h3>Nørbæk Efterskole</h3>
-            <h4>2010 - 2012</h4>
-
-            <br>
-
-            <h2>Afslutter 8. klasse</h2>
-            <h3>Egeskovskolen i Bjerringbro</h3>
-            <h4>Juni 2010</h4>
+        <div>
+        	<br>
+        	<div>
+	            <h2>Nordjyllands Erhvervsakademi</h2>
+	            <h3>Multimedia design</h3>
+	            <h4>2006 - 2008</h4>
+	        </div>
+        	<div>
+	            <h2>Nordjyllands Erhvervsakademi</h2>
+	            <h3>Multimedia design</h3>
+	            <h4>2006 - 2008</h4>
+	        </div>
         </div>
     </div>
 

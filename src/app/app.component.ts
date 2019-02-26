@@ -50,12 +50,10 @@ export class AppComponent implements OnInit {
 		this.profile = this.profileService.getProfile();
 		this.shapes = this.mapService.getPolygons();
 
-		// firebase deploy
 		// draw all map polygons and markers
-		// Get experience and education done 
-		// finalize skills and tools
+		// Get experience and education done
 		// get the 3 new bars implemented and update text accordingly (intro)
-		// header image and text on top
+		// header image
 		// Responsive is fucked
 
 		this.setSkillColors();

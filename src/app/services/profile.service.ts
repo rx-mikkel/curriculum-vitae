@@ -20,16 +20,46 @@ export class ProfileService {
 			linkedIn: 'https://www.linkedin.com/in/mikkeloerum/',
 			positions: [
 				{
-					title: '',
-					company: '',
-					period: '',
-					description: ''
+					title: 'Full-stack designer',
+					company: 'MapsPeople',
+					period: 'Aug 2016 - Apr 2019',
+					description: [
+						'At MapsPeople my main responsibility was developing, designing and architecting the management solution (CMS) for the MapsIndoors platform.',
+						'I rewrote the existing solution in Angular while making improvements to the user interface. Using this as the foundation to gain insights and gather feedback in order to identify areas for improvement and future development.',
+						'The tools used internally have been updated and consolidated in the process and the time spent has been reduced by more than 50% while satisfaction has gone up considerably! This was only possible by working closely with the colleagues who use the tools on a daily basis.'
+					]
 				},
 				{
-					title: '',
-					company: '',
-					period: '',
-					description: ''
+					title: 'Front-end developer',
+					company: 'Klean',
+					period: 'Apr 2015 - Jul 2016',
+					description: [
+						'At Klean I worked closely with our customers to build the websites they need to run their business. Applying my knowledge about user experience, communication and customer behavior to design the right solutions, then develop the websites using the best tools available to optimize speed, maintainability and stability.'
+					]
+				},
+				{
+					title: 'UI developer',
+					company: 'Elsevier',
+					period: 'Sep 2013 - Oct 2014',
+					description: [
+						'At Elsevier I worked on web-based products used in academia.'
+					]
+				},
+				{
+					title: 'Web-designer / UI-developer',
+					company: 'RX UI/UX',
+					period: 'Oct 2012 - Aug 2013',
+					description: [
+						'I worked in close collaboration with my clients and preferably some of their users, ensuring that the people using the software get the value and satisfaction that comes with well designed software.'
+					]
+				},
+				{
+					title: 'Front-end developer, designer',
+					company: 'Doneco',
+					period: 'Feb 2011 - Oct 2012',
+					description: [
+						'Designing and developing the UI for a web-based accounting system.'
+					]
 				}
 			],
 			skills: [
