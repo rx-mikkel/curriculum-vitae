@@ -13,8 +13,8 @@ export class ProfileService {
 			email: 'mikkeloerum@gmail.com',
 			address: 'Zincksvej 7a, Godthåb',
 			intro: [
-				'Focus on solving problems not implementing features.',
-				'I am a designer using code as my primary tool. I focus on building software for the end-user, using the technologies that enable me to do so most efficiently. I always think about the big picture before I start coding - it is not enough to be precise, accuracy is needed too in order to build the right solution well.',
+				'I focus on solving problems not implementing features.',
+				'I am a designer using code as my primary tool. I build software, using the technologies that enable me to do so most efficiently. I always think about the big picture before I start coding - it is not enough to be precise, accuracy is needed too in order to build the right solution well.',
 				'I focus on delivering great software that not only works well for the users, but ties in well with the overall business goals. I prefer to work closely with users to understand the challenges they face and come up with the best solutions in collaboration with them.',
 			],
 			linkedIn: 'https://www.linkedin.com/in/mikkeloerum/',
