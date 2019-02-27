@@ -32,7 +32,7 @@ p + p {
 /* Layout */
 .wrap {
 	width: 100%;
-	min-width: 32em;
+	min-width: 30em;
 	max-width: 72em; 
 }
 
@@ -133,14 +133,9 @@ p + p {
 	background-image: url(../images/behance.png); 
 }
 
-.footer {
-  background-color: #edf2f2;
-  border-top: 1px solid rgba(0, 0, 0, 0.08); }
-
 .footerInner {
-  height: 6em;
-  border-top: 1px solid rgba(255, 255, 255, 0.45);
-  position: relative; }
+	height: 2em;
+	position: relative; }
 
 .footerBubble {
 	width: 3.5em;
@@ -166,6 +161,10 @@ p + p {
 	margin-bottom: 4em;
 }
 
+.experience:last-child {
+	margin-bottom: 0px;
+}
+
 /* Text */
 .stdText {
 	padding: .4em;
@@ -182,7 +181,8 @@ p + p {
   border: 1px solid #aab; }
 
 placeholder {
-  color: #bbb; }
+	color: #bbb; 
+}
 
 /* common */
 .bold {
@@ -194,7 +194,20 @@ placeholder {
 @media screen and (min-width: 440px) {
   .section .column {
     width: 50%;
-    padding-right: 2em; } }
+    padding-right: 2em; } 
+
+    .hidden-full {
+
+	    .section {
+	    	float: left;
+	    	width: 50%;
+	    }
+
+    	.column {
+    		width: 100%;
+    	}
+    }
+}
 /* ==========================================================================
    Over 720 width
    ========================================================================== */
@@ -205,26 +218,40 @@ placeholder {
    Over 980 width
    ========================================================================== */
 @media screen and (min-width: 980px) {
-  .wrap {
-    max-width: 96em; }
-    .wrap .section_right {
-      display: block;
-      float: right;
-      width: 32em;
-      padding-left: 4em; }
-      .wrap .section_right .section {
-        padding: 4em 0em; }
-    .wrap .section_left {
-      float: left;
-      width: 64em; }
-      .wrap .section_left .column {
-        width: 50%; }
-    .wrap #skills, .wrap #languages, .wrap #activities {
-      display: none; }
+	.wrap {
+		max-width: 96em; 
+
+		.section_right {
+			display: block;
+			float: right;
+			width: 32em;
+			padding-left: 4em; 
+
+			.section {
+				padding: 4em 0em; 
+        	}
+		}
+
+		.section_left {
+			float: left;
+			width: 64em; 
+
+			.column {
+				width: 50%; 
+			}
+		}
+
+		.hidden-full {
+			display: none;
+		}
+	}
     .wrap .column {
       width: 100%; }
     .wrap #education {
-      border-bottom: none; } }
+      border-bottom: none; } 
+	}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
