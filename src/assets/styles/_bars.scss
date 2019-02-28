@@ -1,68 +1,48 @@
-﻿.colorTool
-{
-    padding: .2em;
-    margin: ($base-margin/2);
-    background-color: rgba(0, 0, 0, .5);
-    display: inline-block;
-}
-
-.colorInner
-{
-    padding: 0em 11em 0em 0em;
-    display: inline-block;
-    transition: background-color .4s ease;
-    background-color: #2d2d2d;
-}
-
-.colorInner-text {
-    background-color: rgba(45, 45, 45, .85);
-}
-
-.input-group {
-    margin: $base-margin;
-    display: inline-block;
-}
-
-.colorTB
-{
-    border: none;
-    padding: ($base-margin/2) $base-margin;
-    font-size: 1.6em;
-    background-color: rgba(0, 0, 0, .3);
-    color: $light-color;
-    margin-right: ($base-margin/2);
-    text-transform: uppercase;
-}
-
-.shortTB
-{
-    width: 4em;
-}
-
-
-.mediumTB
-{
-    width: 6.5em;
-}
-
-.prefix
-{
-    font-size: 1.6em;
-    color: darken($light-color,20%);
-    margin-right: .4em;
-}
-
-.skillBar {
-    border: 1px solid rgba(37, 112, 126, 0.4);
-    background-color: $purple-bg;
-    width: 100%;
-    margin-bottom: 1.2em; 
-    box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, .4);
+﻿.skillBar {
+	border: 1px solid rgba(37, 112, 126, 0.4);
+	background-color: $purple-bg;
+	width: 100%;
+	margin-bottom: 1.2em; 
+	box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, .4);
 }
 
 .skillInner {
-    border-right: 1px solid rgba(255, 255, 255, .6);
-    background-color: #9de0ad;
-    height: 1em;
-    box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .5);
+	border-right: 1px solid rgba(255, 255, 255, .6);
+	background-color: #9de0ad;
+	height: 1em;
+	box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .5);
+}
+
+/*
+.focusInner {
+	border-right: 1px solid rgba(255, 255, 255, .6);
+	border-left: 1px solid rgba(255, 255, 255, .6);
+	background-color: #ce69d3;
+	height: 1em;
+	box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .5), inset 40px 0px 40px -30px rgba(200, 255, 220, .5);
+}
+*/
+
+.spectrum-div {
+	float: left;
+	padding: 2em;
+	position: relative;
+	width: 100%;
+}
+
+/* ==========================================================================
+   Over 460 width
+   ========================================================================== */
+@media screen and (min-width: 460px) {
+	.spectrum-div {
+		width: 50%;
+	}
+}
+
+
+.focusInner {
+	background: linear-gradient(to right, rgba(206, 105, 211,.5) 0%,rgba(206, 105, 211,1) 25%, rgba(252, 55, 182,1) 50%, rgba(206, 105, 211,1) 75%,rgba(206, 105, 211,0) 99%,rgba(206, 105, 211,5) 100%);
+	background-color: #ce69d3;
+	height: 1em;
+	box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .1), inset 40px 0px 40px -30px rgba(200, 255, 220, .1);
 }

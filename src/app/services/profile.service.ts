@@ -122,6 +122,26 @@ export class ProfileService {
 					rating: 72
 				}
 			],
+			zones: [
+				{
+					startName: 'Website',
+					endName: 'Web-software',
+					start: 20,
+					end: 0
+				},
+				{
+					startName: '(UX) Designer',
+					endName: 'Developer',
+					start: 14,
+					end: 22
+				},
+				{
+					startName: 'Detail',
+					endName: 'Big picture',
+					start: 25,
+					end: 0
+				}
+			],
 			languages: [
 				{
 					name: 'Danish',

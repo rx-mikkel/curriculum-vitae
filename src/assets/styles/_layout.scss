@@ -60,7 +60,7 @@ p + p {
 }
 
 .headerInner {
-	height: 4em;
+	height: 6em;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 	position: relative; 
 }
@@ -84,7 +84,7 @@ p + p {
 }
 
 .section {
-	padding: 4em 2em;
+	padding: 2em;
 
 	h1 {
 		font-size: 2.8em;
@@ -107,7 +107,7 @@ p + p {
 	margin-bottom: 2em;
 
 	h2 {
-		font-size: 2.5em;
+		font-size: 2.4em;
 		font-weight: normal;
 		line-height: 52px;
 		display: inline-block;
@@ -202,9 +202,9 @@ placeholder {
 }
 
 /* ==========================================================================
-   Over 440 width
+   Over 460 width
    ========================================================================== */
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 460px) {
   .section .column {
     width: 50%;
     padding-right: 2em; } 
@@ -220,13 +220,19 @@ placeholder {
     		width: 100%;
     	}
     }
+
+    .headerInner {
+		height: 4em;
+	}
 }
 /* ==========================================================================
    Over 720 width
    ========================================================================== */
 @media screen and (min-width: 720px) {
   .wrap {
-    margin: 0em auto; } }
+		margin: 0em auto; 
+	} 
+}
 /* ==========================================================================
    Over 980 width
    ========================================================================== */
@@ -240,9 +246,11 @@ placeholder {
 			width: 32em;
 			padding-left: 4em; 
 
-			.section {
-				padding: 4em 0em; 
-        	}
+			
+		}
+
+		.section {
+			padding: 4em 0em; 
 		}
 
 		.section_left {
@@ -269,18 +277,16 @@ placeholder {
    Helper classes
    ========================================================================== */
 
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
 .hidden {
-  display: none !important;
-  visibility: hidden; }
+	display: none !important;
+	visibility: hidden; 
+}
 
 .group:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden; }
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden; 
+}
 

@@ -46,7 +46,7 @@
         <div class="section">
             <div class="sectionHeader">
                 <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
-                <h2>Tools & tech</h2>
+                <h2>Tools</h2>
             </div>
             <div class="column">
                 <div *ngFor="let tool of profile.tools" class="skill">
@@ -76,24 +76,37 @@
         </div>
 
         <div class="section" style="border-bottom: none;">
-        <div class="sectionHeader group">
-            <div class="icon" style="background-image: url(../assets/images/activities.png);"></div>
-            <h2>Activities</h2>
-        </div>
-        <div>
-            <div class="column">
-                <h2 *ngFor="let activity of profile.activities">{{activity}}</h2>
-            </div>
-        </div>
-    </div>
+	        <div class="sectionHeader group">
+	            <div class="icon" style="background-image: url(../assets/images/activities.png);"></div>
+	            <h2>Activities</h2>
+	        </div>
+	        <div>
+	            <div class="column">
+	                <h2 *ngFor="let activity of profile.activities">{{activity}}</h2>
+	            </div>
+	        </div>
+	    </div>
 
     </div>
 
-    <div class="section section_left">
+    <div style="float: left" class="section section_left">
         <p *ngFor="let paragraph of profile.intro">{{paragraph}}</p>
+        <br><br>
+        <h2>Relative strength</h2>
+        <p>Where on the following spectrums am I most comfortable and able to provide most value?</p>
+        <div style="margin: 2em -2em 0px;">
+	        <div class="spectrum-div" *ngFor="let zone of profile.zones">
+	        	<div style="position: absolute; top: 0px; left: 2em;"><span style="font-size: 1.5em;">{{zone.startName}}</span></div>
+				<div style="position: absolute; top: 0px; right: 2em;"><span style="font-size: 1.5em;">{{zone.endName}}</span></div>
+				
+				<div class="skillBar">
+					<div [style.margin-left]="zone.start + '%'" [style.margin-right]="zone.end + '%'" class="focusInner"></div>
+				</div>
+			</div>
+		</div>
     </div>
 
-    <div class="section section_left">
+    <div style="float: left;" class="section section_left">
         <div class="sectionHeader group">
             <div class="icon" style="background-image: url(assets/images/experience.png);"></div>
             <h2>Experience</h2>
@@ -149,7 +162,7 @@
         <div class="section">
             <div class="sectionHeader">
                 <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
-                <h2>Tools & tech</h2>
+                <h2>Tools</h2>
             </div>
             <div class="column">
                 <div *ngFor="let tool of profile.tools" class="skill">
