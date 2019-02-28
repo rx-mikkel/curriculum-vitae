@@ -14,9 +14,9 @@ export class AppComponent implements OnInit {
 	shapes: any;
 
 	color1 = {
-		red: 157,
+		red: 118,
 		green: 224,
-		blue: 173
+		blue: 194
 	};
 	color2 = {
 		red: 37,

@@ -22,11 +22,28 @@ p a {
 }
 
 a, a:visited, a:hover {
-	color: #11acc3; 
+	color: $blue-bg; 
 }
 
 p + p {
 	margin-top: 1.4em;
+}
+
+.link-button {
+	background-color: #02a556;
+	padding: .7em 1.4em;
+	color: #fff;
+	border-radius: 50px;
+	text-decoration: none;
+	border: 2px solid #fff;
+	font-size: 1.6em;
+	font-weight: bold;
+	transition: all .3s ease;
+
+	&:hover {
+		background-color: #027a40;
+		color: #fff;
+	}
 }
 
 /* Layout */
@@ -103,7 +120,7 @@ p + p {
 		height: 5.2em;
 		margin-right: 1em;
 		border-radius: 50%;
-		background-color: #9de0ad;
+		background-color: #25707e;
 		border: .2em solid #fff;
 		display: inline-block;
 		transition: background-color 1s ease; 
@@ -119,7 +136,7 @@ p + p {
 }
 .extLink {
 	height: 3.2em;
-	padding: .2em 2em 0em 4.6em;
+	padding: .4em 2em 0em 4em;
 	background-repeat: no-repeat;
 	background-position: top left;
 	margin-top: 1.4em; 
@@ -183,10 +200,6 @@ p + p {
 placeholder {
 	color: #bbb; 
 }
-
-/* common */
-.bold {
-  font-weight: bold; }
 
 /* ==========================================================================
    Over 440 width

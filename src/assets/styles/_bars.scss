@@ -39,10 +39,6 @@
     width: 4em;
 }
 
-.initial-color
-{
-    background-color: $primary-color;
-}
 
 .mediumTB
 {
@@ -58,7 +54,7 @@
 
 .skillBar {
     border: 1px solid rgba(37, 112, 126, 0.4);
-    background-color: #2f5056;
+    background-color: $purple-bg;
     width: 100%;
     margin-bottom: 1.2em; 
     box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, .4);
