@@ -50,7 +50,7 @@ export class ProfileService {
 					period: 'Sep 2013 - Oct 2014',
 					description: [
 						'At Elsevier I worked on web-based products used in academia including Pure and Pure Portal.',
-						'I also designed a data-import wizard which greatly reduced error margins, implementation time, man-hours needed, and improved predictability of the outcome.'
+						'I designed a data-import wizard which greatly reduced error margins, implementation time, man-hours needed, and improved predictability of the outcome.'
 					]
 				},
 				{
