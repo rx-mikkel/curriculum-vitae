@@ -27,6 +27,9 @@ export class ProfileService {
 						'At MapsPeople my main responsibility was developing, designing and architecting the management solution (CMS) for the MapsIndoors platform.',
 						'I rewrote the existing solution in Angular while making improvements to the user interface. Using this as the foundation to gain insights and gather feedback in order to identify areas for improvement and future development.',
 						'The tools used internally have been updated and consolidated in the process and the time spent has been reduced by more than 50% while satisfaction has gone up considerably! This was only possible by working closely with the colleagues who use the tools on a daily basis.'
+					],
+					links: [
+						'https://www.mapspeople.com/cms/'
 					]
 				},
 				{
@@ -35,6 +38,9 @@ export class ProfileService {
 					period: 'Apr 2015 - Jul 2016',
 					description: [
 						'At Klean I worked closely with our customers to build the websites they need to run their business. Applying my knowledge about user experience, communication and customer behavior to design the right solutions, then develop the websites using the best tools available to optimize speed, maintainability and stability.'
+					],
+					links: [
+						'https://simplygo.dk/'
 					]
 				},
 				{
@@ -42,7 +48,8 @@ export class ProfileService {
 					company: 'Elsevier',
 					period: 'Sep 2013 - Oct 2014',
 					description: [
-						'At Elsevier I worked on web-based products used in academia.'
+						'At Elsevier I worked on web-based products used in academia including Pure and Pure Portal.',
+						'I also designed a data-import wizard which greatly reduced error margins, implementation time, man-hours needed, and improved predictability of the outcome.'
 					]
 				},
 				{
@@ -58,7 +65,7 @@ export class ProfileService {
 					company: 'Doneco',
 					period: 'Feb 2011 - Oct 2012',
 					description: [
-						'Designing and developing the UI for a web-based accounting system.'
+						'Designing and developing a web-based accounting system both functionally and UI-wise.'
 					]
 				}
 			],

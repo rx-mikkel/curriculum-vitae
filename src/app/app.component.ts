@@ -50,11 +50,12 @@ export class AppComponent implements OnInit {
 		this.profile = this.profileService.getProfile();
 		this.shapes = this.mapService.getPolygons();
 
-		// Responsive
-		// get the 3 new bars implemented and update text accordingly (intro)
+		// links under each section
+		// clean up
+		// github link?
 
 		// draw all map polygons and markers
-		// header image
+		// header image?
 
 		this.setSkillColors();
 

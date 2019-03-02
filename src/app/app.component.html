@@ -2,9 +2,7 @@
 <div class="header">
     <div class="wrap group">
         <div class="section">
-            <div class="sectionHeader group">
-                <h1>{{profile.userName}}</h1>
-            </div>
+            <h1>{{profile.userName}}</h1>
             <div class="contact">
                 <h2>{{profile.title}}</h2>
                 <br>
@@ -12,7 +10,7 @@
                 <a href="mailto:{{profile.email}}">{{profile.email}}</a>
             </div>
             <div class="column">
-                <a style="font-size: 1em;" href="{{profile.linkedIn}}"><div class="extLink" id="linkedin"><p>Connect</p></div></a>
+                <a class="linked-in" href="{{profile.linkedIn}}">Connect</a>
             </div>
         </div>
     </div>
@@ -26,18 +24,15 @@
 
     <div class="section_right">
         
-        <div class="section" style="border-top: none;">
+        <div class="section">
             <div class="sectionHeader group">
                 <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
                 <h2>Skills</h2>
             </div>
             <div>
-                <div class="column">
-                    <div *ngFor="let skill of profile.skills" class="skill">
-                        <p>{{skill.name}}</p>
-                        <div class="skillBar">
-                            <div class="skillInner" [style.background-color]="skill.barColor" [style.width]="skill.rating + '%'"></div>
-                        </div>
+                <div class="column group">
+                    <div *ngFor="let skill of profile.skills">
+                        <span class="skill-tag">{{skill.name}}</span>
                     </div>
                 </div>
             </div>
@@ -49,10 +44,9 @@
                 <h2>Tools</h2>
             </div>
             <div class="column">
-                <div *ngFor="let tool of profile.tools" class="skill">
-                    <p>{{tool.name}}</p>
-                    <div class="skillBar">
-                        <div class="skillInner" [style.background-color]="tool.barColor" [style.width]="tool.rating + '%'"></div>
+            	<div class="column group">
+                    <div *ngFor="let tool of profile.tools">
+                        <span class="skill-tag">{{tool.name}}</span>
                     </div>
                 </div>
             </div>
@@ -117,6 +111,9 @@
         		<h3>{{position.company}}</h3>
         		<h4>{{position.period}}</h4>
         		<p *ngFor="let paragraph of position.description">{{paragraph}}</p>
+        		<div class="link-container" *ngFor="let link of position.links">
+        			<a [href]="link">{{link}}</a>
+        		</div>
         	</div>
         </div>
     </div>
@@ -142,38 +139,35 @@
     </div>
 
     <div class="hidden-full group">
-        <div class="section">
-            <div class="sectionHeader group">
-                <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
-                <h2>Skills</h2>
-            </div>
-            <div>
-                <div class="column">
-                    <div *ngFor="let skill of profile.skills" class="skill">
-                        <p>{{skill.name}}</p>
-                        <div class="skillBar">
-                            <div class="skillInner" [style.background-color]="skill.barColor" [style.width]="skill.rating + '%'"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div class="section">
+		    <div class="sectionHeader group">
+		        <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
+		        <h2>Skills</h2>
+		    </div>
+		    <div>
+		        <div class="column group">
+		            <div *ngFor="let skill of profile.skills">
+		                <span class="skill-tag">{{skill.name}}</span>
+		            </div>
+		        </div>
+		    </div>
+		</div>
 
-        <div class="section">
-            <div class="sectionHeader">
-                <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
-                <h2>Tools</h2>
-            </div>
-            <div class="column">
-                <div *ngFor="let tool of profile.tools" class="skill">
-                    <p>{{tool.name}}</p>
-                    <div class="skillBar">
-                        <div class="skillInner" [style.background-color]="tool.barColor" [style.width]="tool.rating + '%'"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+		<div class="section">
+		    <div class="sectionHeader">
+		        <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
+		        <h2>Tools</h2>
+		    </div>
+		    <div class="column">
+		    	<div class="column group">
+		            <div *ngFor="let tool of profile.tools">
+		                <span class="skill-tag">{{tool.name}}</span>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+	<div class="hidden-full group">
         <div class="section">
             <div class="sectionHeader group">
                 <div class="icon" style="background-image: url('/assets/images/lang.png');"></div>
