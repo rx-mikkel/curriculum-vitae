@@ -50,10 +50,6 @@ export class AppComponent implements OnInit {
 		this.profile = this.profileService.getProfile();
 		this.shapes = this.mapService.getPolygons();
 
-		// links under each section
-		// clean up
-		// github link?
-
 		// draw all map polygons and markers
 		// header image?
 
@@ -119,24 +115,6 @@ export class AppComponent implements OnInit {
 		polygon.addListener('click', function () {
 
 		});
-
-		/*
-
-		roomPolygon.addListener('mouseover', function () {
-			if (this != self.selectedRoomPolygon) {
-				this.setOptions({ fillOpacity: .25, strokeWeight: 2 });
-			}
-		});
-
-		roomPolygon.addListener('mouseout', function () {
-			if (this != self.selectedRoomPolygon) {
-				this.setOptions({ fillOpacity: .0, strokeWeight: 0 });
-			}
-		});
-
-		*/
-
-		//this.roomsPolygonArray.push(roomPolygon);
 	}
 
 	newPolygon(geometry) {

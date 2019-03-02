@@ -5,6 +5,7 @@ export class ProfileService {
 
 	constructor() { }
 
+	// ideally this comes from a http-request, for now mock-data
 	getProfile() {
 		return {
 			userName: 'Mikkel Ørum Skovgaard-Petersen',
