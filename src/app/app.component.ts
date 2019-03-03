@@ -52,6 +52,7 @@ export class AppComponent implements OnInit {
 
 		// draw all map polygons and markers
 		// header image?
+		// print stylesheet
 
 		this.setSkillColors();
 

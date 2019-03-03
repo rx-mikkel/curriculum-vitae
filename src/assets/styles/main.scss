@@ -6,5 +6,6 @@ Author:     Mikkel Oerum Skovgaard-Petersen
 @import "reset";
 @import "defaults";
 @import "layout";
-@import "bars";
-@import "map";
+
+@import "modules/bars";
+@import "modules/map";

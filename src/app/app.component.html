@@ -129,26 +129,6 @@
         </div>
     </div>
 
-    <div *ngIf="false" class="section section_left" id="education">
-        <div class="sectionHeader group">
-            <div class="icon" style="background-image: url(assets/images/education.png);"></div>
-            <h2>Education</h2>
-        </div>
-        <div>
-        	<br>
-        	<div>
-	            <h2>Nordjyllands Erhvervsakademi</h2>
-	            <h3>Multimedia design</h3>
-	            <h4>2006 - 2008</h4>
-	        </div>
-        	<div>
-	            <h2>Nordjyllands Erhvervsakademi</h2>
-	            <h3>Multimedia design</h3>
-	            <h4>2006 - 2008</h4>
-	        </div>
-        </div>
-    </div>
-
     <div class="hidden-full group">
 		<div class="section">
 		    <div class="sectionHeader group">
@@ -177,8 +157,7 @@
 		        </div>
 		    </div>
 		</div>
-	</div>
-	<div class="hidden-full group">
+
         <div class="section">
             <div class="sectionHeader group">
                 <div class="icon" style="background-image: url('/assets/images/lang.png');"></div>
@@ -196,27 +175,43 @@
             </div>
         </div>
 
-        <div class="section" style="border-bottom: none;">
-        <div class="sectionHeader group">
-            <div class="icon" style="background-image: url(../assets/images/activities.png);"></div>
-            <h2>Activities</h2>
-        </div>
-        <div>
-            <div class="column">
-                <h2 *ngFor="let activity of profile.activities">{{activity}}</h2>
+        <div class="section">
+	        <div class="sectionHeader group">
+	            <div class="icon" style="background-image: url(../assets/images/activities.png);"></div>
+	            <h2>Activities</h2>
+	        </div>
+	        <div>
+	            <div class="column">
+	                <h2 *ngFor="let activity of profile.activities">{{activity}}</h2>
+	            </div>
+	        </div>
+	    </div>
+
+        <div class="section">
+	    	<div class="sectionHeader group">
+                <div class="icon" style="background-image: url('/assets/images/gh.png'); background-size: 80%; background-repeat: no-repeat;"></div>
+                <h2>GitHub</h2>
             </div>
-        </div>
-    </div>
+            <div class="column">
+		    	<p>
+		    		Visit my
+		    		<a href="https://github.com/rx-mikkel/">GitHub</a>
+		    	</p>
+		    </div>
+	    </div>
 
+	</div>
+
+	<div class="section" style="float: left; text-align: center; width: 100%;">
+		<a class="link-button" href="mailto:mikkeloerum@gmail.com">Contact me</a>
+	</div>
+
+	<div class="section map-section">
+		<div id="map" class="map"></div>
+	</div>
 </div>
 
-<div class="section" style="float: left; text-align: center; width: 100%;">
-	<a class="link-button" href="mailto:mikkeloerum@gmail.com">Contact me</a>
-</div>
 
-<div class="section map-section">
-    <div id="map" class="map"></div>
-</div>
 
 <div class="footer">
     <div class="footerInner">

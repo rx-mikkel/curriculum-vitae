@@ -164,7 +164,7 @@ export class ProfileService {
 					rating: 54
 				}
 			],
-			activities: ['Bicycling', 'CrossFit', 'Woodworking', 'Sketching']
+			activities: ['Family','Bicycling', 'CrossFit', 'Woodworking', 'Sketching']
 		}
 	}
 
