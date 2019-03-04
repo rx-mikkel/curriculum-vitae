@@ -22,182 +22,116 @@
 
 <div class="wrap group">
 
+	<div class="section_left">
+		<div class="section group">
+		    <p *ngFor="let paragraph of profile.intro">{{paragraph}}</p>
+		    <br><br>
+		    <h2>Relative strength</h2>
+		    <p>Where on the following spectrums am I most comfortable and able to provide most value?</p>
+		    <div style="margin: 2em -2em 0px;">
+		        <div class="spectrum-div" *ngFor="let zone of profile.zones">
+		        	<div style="position: absolute; top: 0px; left: 2em;"><span style="font-size: 1.5em;">{{zone.startName}}</span></div>
+					<div style="position: absolute; top: 0px; right: 2em;"><span style="font-size: 1.5em;">{{zone.endName}}</span></div>
+					
+					<div class="skillBar">
+						<div [style.margin-left]="zone.start + '%'" [style.margin-right]="zone.end + '%'" class="focusInner"></div>
+					</div>
+					<p>{{zone.description}}</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="section">
+		    <div class="sectionHeader group">
+		        <div class="icon" style="background-image: url(assets/images/experience.png);"></div>
+		        <h2>Experience</h2>
+		    </div>
+		    <div>
+		    	<div *ngFor="let position of profile.positions" class="experience">
+		    		<h2>{{position.title}}</h2>
+		    		<h3>{{position.company}}</h3>
+		    		<h4>{{position.period}}</h4>
+		    		<p *ngFor="let paragraph of position.description">{{paragraph}}</p>
+		    		<div class="link-container" *ngFor="let link of position.links">
+		    			<a [href]="link">{{link}}</a>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+
+	</div>
+
     <div class="section_right">
-        
-        <div class="section">
-            <div class="sectionHeader group">
-                <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
-                <h2>Skills</h2>
-            </div>
-            <div>
-                <div class="column group">
-                    <div *ngFor="let skill of profile.skills">
-                        <span class="skill-tag">{{skill.name}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+	    <div class="group">
+		    <div class="section">
+		        <div class="sectionHeader group">
+		            <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
+		            <h2>Skills</h2>
+		        </div>
+		        <div>
+		            <div class="column group">
+		                <div *ngFor="let skill of profile.skills">
+		                    <span class="skill-tag">{{skill.name}}</span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
 
-        <div class="section">
-            <div class="sectionHeader">
-                <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
-                <h2>Tools</h2>
-            </div>
-            <div class="column">
-            	<div class="column group">
-                    <div *ngFor="let tool of profile.tools">
-                        <span class="skill-tag">{{tool.name}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+		    <div class="section">
+		        <div class="sectionHeader">
+		            <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
+		            <h2>Tools</h2>
+		        </div>
+		        <div class="column">
+		        	<div class="column group">
+		                <div *ngFor="let tool of profile.tools">
+		                    <span class="skill-tag">{{tool.name}}</span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
 
-        <div class="section">
-            <div class="sectionHeader group">
-                <div class="icon" style="background-image: url('/assets/images/lang.png');"></div>
-                <h2>Languages</h2>
-            </div>
-            <div>
-                <div class="column">
-                    <div *ngFor="let lang of profile.languages" class="skill">
-                        <p>{{lang.name}}</p>
-                        <div class="skillBar">
-                            <div class="skillInner" [style.background-color]="lang.barColor" [style.width]="lang.rating + '%'"></div>
-                        </div>
-                    </div>                
-                </div>
-            </div>
-        </div>
+		<div class="group">
+		    <div class="section">
+		        <div class="sectionHeader group">
+		            <div class="icon" style="background-image: url('/assets/images/lang.png');"></div>
+		            <h2>Languages</h2>
+		        </div>
+		        <div>
+		            <div class="column">
+		                <div *ngFor="let lang of profile.languages" class="skill">
+		                    <p>{{lang.name}}</p>
+		                    <div class="skillBar">
+		                        <div class="skillInner" [style.background-color]="lang.barColor" [style.width]="lang.rating + '%'"></div>
+		                    </div>
+		                </div>                
+		            </div>
+		        </div>
+		    </div>
 
-        <div class="section" style="border-bottom: none;">
-	        <div class="sectionHeader group">
-	            <div class="icon" style="background-image: url(../assets/images/activities.png);"></div>
-	            <h2>Activities</h2>
-	        </div>
-	        <div>
-	            <div class="column">
-	                <h2 *ngFor="let activity of profile.activities">{{activity}}</h2>
-	            </div>
-	        </div>
-	    </div>
+		    <div class="section" style="border-bottom: none;">
+		        <div class="sectionHeader group">
+		            <div class="icon" style="background-image: url(../assets/images/activities.png);"></div>
+		            <h2>Activities</h2>
+		        </div>
+		        <div>
+		            <div class="column">
+		                <h2 *ngFor="let activity of profile.activities">{{activity}}</h2>
+		            </div>
+		        </div>
+		    </div>
+		</div>
 
 	    <div class="section">
 	    	<div class="sectionHeader group">
-                <div class="icon" style="background-image: url('/assets/images/gh.png'); background-size: 80%; background-repeat: no-repeat;"></div>
-                <h2>GitHub</h2>
-            </div>
+	            <div class="icon" style="background-image: url('/assets/images/gh.png'); background-size: 80%; background-repeat: no-repeat;"></div>
+	            <h2>GitHub</h2>
+	        </div>
 	    	<p>
 	    		Visit my
 	    		<a href="https://github.com/rx-mikkel/">GitHub</a>
 	    	</p>
-	    </div>
-
-    </div>
-
-    <div style="float: left" class="section section_left">
-        <p *ngFor="let paragraph of profile.intro">{{paragraph}}</p>
-        <br><br>
-        <h2>Relative strength</h2>
-        <p>Where on the following spectrums am I most comfortable and able to provide most value?</p>
-        <div style="margin: 2em -2em 0px;">
-	        <div class="spectrum-div" *ngFor="let zone of profile.zones">
-	        	<div style="position: absolute; top: 0px; left: 2em;"><span style="font-size: 1.5em;">{{zone.startName}}</span></div>
-				<div style="position: absolute; top: 0px; right: 2em;"><span style="font-size: 1.5em;">{{zone.endName}}</span></div>
-				
-				<div class="skillBar">
-					<div [style.margin-left]="zone.start + '%'" [style.margin-right]="zone.end + '%'" class="focusInner"></div>
-				</div>
-			</div>
-		</div>
-    </div>
-
-    <div style="float: left;" class="section section_left">
-        <div class="sectionHeader group">
-            <div class="icon" style="background-image: url(assets/images/experience.png);"></div>
-            <h2>Experience</h2>
-        </div>
-        <div>
-        	<div *ngFor="let position of profile.positions" class="experience">
-        		<h2>{{position.title}}</h2>
-        		<h3>{{position.company}}</h3>
-        		<h4>{{position.period}}</h4>
-        		<p *ngFor="let paragraph of position.description">{{paragraph}}</p>
-        		<div class="link-container" *ngFor="let link of position.links">
-        			<a [href]="link">{{link}}</a>
-        		</div>
-        	</div>
-        </div>
-    </div>
-
-    <div class="hidden-full group">
-		<div class="section">
-		    <div class="sectionHeader group">
-		        <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
-		        <h2>Skills</h2>
-		    </div>
-		    <div>
-		        <div class="column group">
-		            <div *ngFor="let skill of profile.skills">
-		                <span class="skill-tag">{{skill.name}}</span>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-
-		<div class="section">
-		    <div class="sectionHeader">
-		        <div class="icon" style="background-image: url('/assets/images/skills.png');"></div>
-		        <h2>Tools</h2>
-		    </div>
-		    <div class="column">
-		    	<div class="column group">
-		            <div *ngFor="let tool of profile.tools">
-		                <span class="skill-tag">{{tool.name}}</span>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-
-        <div class="section">
-            <div class="sectionHeader group">
-                <div class="icon" style="background-image: url('/assets/images/lang.png');"></div>
-                <h2>Languages</h2>
-            </div>
-            <div>
-                <div class="column">
-                    <div *ngFor="let lang of profile.languages" class="skill">
-                        <p>{{lang.name}}</p>
-                        <div class="skillBar">
-                            <div class="skillInner" [style.background-color]="lang.barColor" [style.width]="lang.rating + '%'"></div>
-                        </div>
-                    </div>                
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-	        <div class="sectionHeader group">
-	            <div class="icon" style="background-image: url(../assets/images/activities.png);"></div>
-	            <h2>Activities</h2>
-	        </div>
-	        <div>
-	            <div class="column">
-	                <h2 *ngFor="let activity of profile.activities">{{activity}}</h2>
-	            </div>
-	        </div>
-	    </div>
-
-        <div class="section">
-	    	<div class="sectionHeader group">
-                <div class="icon" style="background-image: url('/assets/images/gh.png'); background-size: 80%; background-repeat: no-repeat;"></div>
-                <h2>GitHub</h2>
-            </div>
-            <div class="column">
-		    	<p>
-		    		Visit my
-		    		<a href="https://github.com/rx-mikkel/">GitHub</a>
-		    	</p>
-		    </div>
 	    </div>
 
 	</div>

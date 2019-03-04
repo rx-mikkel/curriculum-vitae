@@ -135,19 +135,22 @@ export class ProfileService {
 					startName: 'Website',
 					endName: 'Web-software',
 					start: 20,
-					end: 0
+					end: 0,
+					description: 'Between websites and advanced web-based systems, typically behind a login, I have specialised more in the latter.'
 				},
 				{
 					startName: '(UX) Designer',
 					endName: 'Developer',
 					start: 14,
-					end: 22
+					end: 22,
+					description: 'Designing functionality and interaction then implementing it as production-ready code is what I do best.'
 				},
 				{
 					startName: 'Detail',
 					endName: 'Big picture',
 					start: 25,
-					end: 0
+					end: 0,
+					description: 'I tend to be more concerned with what I am building than how.'
 				}
 			],
 			languages: [
@@ -164,7 +167,7 @@ export class ProfileService {
 					rating: 54
 				}
 			],
-			activities: ['Family','Bicycling', 'CrossFit', 'Woodworking', 'Sketching']
+			activities: ['My kids and wife', 'Family','Bicycling', 'Woodworking', 'Sketching']
 		}
 	}
 

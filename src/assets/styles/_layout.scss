@@ -165,7 +165,6 @@ h4 {
 }
 
 .section_right {
-	display: none;
 
 	h2 {
 		font-weight: normal;
@@ -188,9 +187,12 @@ h4 {
    Over 460 width
    ========================================================================== */
 @media screen and (min-width: 460px) {
-  .section .column {
-    width: 50%;
-    padding-right: 2em; } 
+	.section_right {
+		.section {
+			width: 50%;
+			float: left;
+		}
+	}
 
     .hidden-full {
 
@@ -224,12 +226,14 @@ h4 {
 		max-width: 96em; 
 
 		.section_right {
-			display: block;
 			float: right;
 			width: 32em;
-			padding-left: 4em; 
+			padding-left: 4em;
 
-			
+			.section {
+				width: 100%;
+				float: none;
+			}
 		}
 
 		.section {
@@ -245,16 +249,11 @@ h4 {
 			}
 		}
 
-		.hidden-full {
-			display: none;
+		.column {
+			width: 100%; 
 		}
 	}
-    .wrap .column {
-      width: 100%; }
-    .wrap #education {
-      border-bottom: none; } 
-	}
-
+}
 
 /* ==========================================================================
    Helper classes
