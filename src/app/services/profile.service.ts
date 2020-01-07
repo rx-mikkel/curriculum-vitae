@@ -21,6 +21,17 @@ export class ProfileService {
 			linkedIn: 'https://www.linkedin.com/in/mikkeloerum/',
 			positions: [
 				{
+					title: 'UI designer / Front-end developer',
+					company: 'Perfion',
+					period: 'Jun 2019 - Present',
+					description: [
+						'sadasd asdad'
+					],
+					links: [
+						'https://www.perfion.com/'
+					]
+				},
+				{
 					title: 'Full-stack designer',
 					company: 'MapsPeople',
 					period: 'Aug 2016 - Apr 2019',
@@ -167,7 +178,7 @@ export class ProfileService {
 					rating: 54
 				}
 			],
-			activities: ['My kids and wife', 'Family','Bicycling', 'Woodworking', 'Sketching']
+			activities: ['Play with my kids', 'Archery', 'Bicycling', 'Woodworking', 'Sketching']
 		}
 	}
 

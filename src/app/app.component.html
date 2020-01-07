@@ -53,7 +53,7 @@
 		    		<h4>{{position.period}}</h4>
 		    		<p *ngFor="let paragraph of position.description">{{paragraph}}</p>
 		    		<div class="link-container" *ngFor="let link of position.links">
-		    			<a [href]="link">{{link}}</a>
+		    			<a [href]="link" target="_blank">{{link}}</a>
 		    		</div>
 		    	</div>
 		    </div>
