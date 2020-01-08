@@ -14,7 +14,7 @@ export class ProfileService {
 			email: 'mikkeloerum@gmail.com',
 			address: 'Zincksvej 7a, Godthåb',
 			intro: [
-				'I focus on solving problems not implementing features.',
+				'I focus on solving problems over implementing features.',
 				'I am a designer using code as my primary tool. I build software, using the technologies that enable me to do so most efficiently. I always think about the big picture before I start coding - it is not enough to be precise, accuracy is needed too in order to build the right solution well.',
 				'I focus on delivering great software that not only works well for the users, but ties in well with the overall business goals. I prefer to work closely with users to understand the challenges they face and come up with the best solutions in collaboration with them.',
 			],
@@ -61,7 +61,7 @@ export class ProfileService {
 					period: 'Sep 2013 - Oct 2014',
 					description: [
 						'At Elsevier I worked on web-based products used in academia including Pure and Pure Portal.',
-						'I designed a data-import wizard which greatly reduced error margins, implementation time, man-hours needed, and improved predictability of the outcome.'
+						'I designed a data-import wizard which greatly reduced error margins, implementation time, maintenance and improved predictability of the outcome.'
 					]
 				},
 				{
@@ -77,7 +77,7 @@ export class ProfileService {
 					company: 'Doneco',
 					period: 'Feb 2011 - Oct 2012',
 					description: [
-						'Designing and developing a web-based accounting system both functionally and UI-wise.'
+						'Designing and developing a web-based accounting system.'
 					]
 				}
 			],
@@ -103,11 +103,15 @@ export class ProfileService {
 					rating: 70
 				},
 				{
-					name: 'Performance optimizations',
+					name: 'Performance',
 					rating: 68
 				},
 				{
 					name: 'Responsive webdesign',
+					rating: 94,
+				},
+				{
+					name: 'Data visualisation',
 					rating: 94,
 				}
 			],
@@ -145,16 +149,16 @@ export class ProfileService {
 				{
 					startName: 'Website',
 					endName: 'Web-software',
-					start: 20,
+					start: 24,
 					end: 0,
-					description: 'Between websites and advanced web-based systems, typically behind a login, I have specialised more in the latter.'
+					description: 'Between websites and advanced web-based software, I have specialised more in the latter.'
 				},
 				{
 					startName: '(UX) Designer',
 					endName: 'Developer',
 					start: 14,
 					end: 22,
-					description: 'Designing functionality and interaction then implementing it as production-ready code is what I do best.'
+					description: 'Designing functionality and interaction, then implementing it as production-ready code is what I do best.'
 				},
 				{
 					startName: 'Detail',
@@ -178,7 +182,7 @@ export class ProfileService {
 					rating: 54
 				}
 			],
-			activities: ['Play with my kids', 'Archery', 'Bicycling', 'Woodworking', 'Sketching']
+			activities: ['Play with my kids', 'Archery', 'Bicycling', 'Woodworking']
 		}
 	}
 

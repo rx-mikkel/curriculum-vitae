@@ -9,9 +9,9 @@ export class MapService {
 		return [
 			{
 				name: 'land plot',
-				color: '#cccccc',
-				outline: '#162123',
-				opacity: 1,
+				color: '#57805c',
+				outline: '#224326',
+				opacity: .8,
 				zIndex: 1,
 				geometry: {
 					coordinates: [
