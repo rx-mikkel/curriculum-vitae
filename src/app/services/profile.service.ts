@@ -25,7 +25,7 @@ export class ProfileService {
 					company: 'Perfion',
 					period: 'Jun 2019 - Present',
 					description: [
-						'sadasd asdad'
+						''
 					],
 					links: [
 						'https://www.perfion.com/'
