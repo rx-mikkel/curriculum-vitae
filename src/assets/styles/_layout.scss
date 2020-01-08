@@ -21,8 +21,12 @@ p a {
 	font-size: 1em; 
 }
 
-a, a:visited, a:hover {
-	color: $blue-bg; 
+a, a:visited {
+	color: $blue-bg;
+}
+
+a:hover {
+	color: #0791ab;
 }
 
 p + p {
@@ -41,15 +45,18 @@ h2 {
 }
 
 h3 {
-	font-size: 1.5em;
-	font-weight: 100;
+	font-size: 1.7em;
+	font-weight: 300;
+	margin: 1em 0px;
+	margin-bottom: .2em;
 }
 
 h4 {
-	margin: .2em 0em 1.6em 0em;
+	margin: 1.2em 0em;
+	margin-top: 0px;
 	font-size: 1.2em;
-	color: #6fa0a8;
-	font-weight: normal; 
+	color: $blue-bg;
+	font-weight: 300; 
 }
 
 

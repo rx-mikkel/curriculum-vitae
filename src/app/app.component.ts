@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
 		zoom: 18,
 		styles: [
 			{ "featureType": "transit", "stylers": [{ "visibility": "off" }] },
-			{ "stylers": [{ "saturation": -40 }, { "lightness": 20}] }
+			{ "stylers": [{ "saturation": -20 }, { "lightness": 10}] }
 		]
 	};
 
