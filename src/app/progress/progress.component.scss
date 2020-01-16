@@ -12,14 +12,21 @@
 }
 
 svg {
-  width: 62px;
-  height: 62px;
-  position: relative;
-  z-index: 1;
+	width: 62px;
+	height: 62px;
+	position: relative;
+	z-index: 1;
 }
 
 .indicator {
 	transition: all 2s ease-in-out;
+	stroke: #18b3aa;
+}
+
+.full {
+	.indicator {
+		stroke: #24d488;
+	}
 }
 
 .percentage-indicator {
