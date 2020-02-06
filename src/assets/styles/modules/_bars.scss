@@ -24,33 +24,18 @@
 	white-space: nowrap;
 }
 
-.header .section .linked-in {
-	background-color: #0077B5;
-	border-radius: 50px;
-	font-weight: bold;
-	color: #fff;
-	padding: .2em .8em;
-	border: 2px solid #fff;
-	text-decoration: none;
-	margin-top: .4em;
-	display: inline-block;
-}
-
-/*
-.focusInner {
-	border-right: 1px solid rgba(255, 255, 255, .6);
-	border-left: 1px solid rgba(255, 255, 255, .6);
-	background-color: #ce69d3;
-	height: 1em;
-	box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .5), inset 40px 0px 40px -30px rgba(200, 255, 220, .5);
-}
-*/
-
 .spectrum-div {
 	float: left;
 	padding: 2em;
 	position: relative;
 	width: 100%;
+}
+
+.focusInner {
+	background: linear-gradient(to right, rgba(206, 105, 211,.5) 0%,rgba(206, 105, 211,1) 25%, rgba(252, 55, 182,1) 50%, rgba(206, 105, 211,1) 75%,rgba(206, 105, 211,0) 99%,rgba(206, 105, 211,5) 100%);
+	background-color: #ce69d3;
+	height: 1em;
+	box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .1), inset 40px 0px 40px -30px rgba(200, 255, 220, .1);
 }
 
 /* ==========================================================================
@@ -60,12 +45,4 @@
 	.spectrum-div {
 		width: 50%;
 	}
-}
-
-
-.focusInner {
-	background: linear-gradient(to right, rgba(206, 105, 211,.5) 0%,rgba(206, 105, 211,1) 25%, rgba(252, 55, 182,1) 50%, rgba(206, 105, 211,1) 75%,rgba(206, 105, 211,0) 99%,rgba(206, 105, 211,5) 100%);
-	background-color: #ce69d3;
-	height: 1em;
-	box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .1), inset 40px 0px 40px -30px rgba(200, 255, 220, .1);
 }
