@@ -9,7 +9,7 @@ export class ProfileService {
 	getProfile() {
 		return {
 			userName: 'Mikkel Ørum Skovgaard-Petersen',
-			title: 'Full-stack designer, front-end developer',
+			title: 'UI designer and developer',
 			phone: '+45 2687 8061',
 			email: 'mikkeloerum@gmail.com',
 			address: 'Zincksvej 7a, Godthåb',
