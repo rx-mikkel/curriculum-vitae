@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ProfileService }	from './services/profile.service';
-import { MapService }	from './services/map.service';
 
-declare var google: any;
 
 @Component({
   selector: 'app-root',
@@ -11,7 +9,6 @@ declare var google: any;
 })
 export class AppComponent implements OnInit {
 	profile: any;
-	shapes: any;
 
 	color1 = {
 		red: 118,
@@ -24,53 +21,22 @@ export class AppComponent implements OnInit {
 		blue: 126
 	};
 
-	googleMap: any;
-	mapOptions = {
-		draggableCursor: '',
-		disableDefaultUI: true,
-		zoomControl: true,
-		controlSize: 32,
-		zoomControlOptions: {
-			position: google.maps.ControlPosition.LEFT_CENTER
-		},
-		center: {lat: 56.96807, lng: 9.81425129877266},
-		zoom: 18,
-		styles: [
-			{ "featureType": "transit", "stylers": [{ "visibility": "off" }] },
-			{ "stylers": [{ "saturation": -20 }, { "lightness": 10}] }
-		]
-	};
+	
 
 	constructor(
-		private profileService: ProfileService,
-		private mapService: MapService
+		private profileService: ProfileService
 	) {}
 
 	ngOnInit() {
 		this.profile = this.profileService.getProfile();
-		this.shapes = this.mapService.getPolygons();
 
 		// draw all map polygons and markers
 		// header image?
 		// print stylesheet
 
 		this.setSkillColors();
-
-		this.initMap();
 	}
 
-	initMap() {
-		this.googleMap = new google.maps.Map(document.getElementById('map'), this.mapOptions);
-
-		this.googleMap.addListener('click', function (e) {
-			let coords = [e.latLng.lng(), e.latLng.lat()];
-			console.log(coords);
-		});
-
-		for(let shape of this.shapes) {
-			this.drawPolygon(shape);
-		}
-	}
 
 	setSkillColors() {
 		for(let skill of this.profile.skills) {
@@ -96,7 +62,7 @@ export class AppComponent implements OnInit {
 		let resultColor = 'rgb(' + rCalc + ', ' + gCalc + ', ' + bCalc + ')';
 		return resultColor;
 	}
-
+	/*
 	drawPolygon(shape) {
 		var self = this;
 
@@ -136,4 +102,5 @@ export class AppComponent implements OnInit {
 
 		return polygon;
 	}
+	*/
 }

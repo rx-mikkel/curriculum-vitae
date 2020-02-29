@@ -4,7 +4,6 @@ import { NgModule } 			from '@angular/core';
 import { AppComponent } 		from './app.component';
 
 import { ProfileService }		from './services/profile.service';
-import { MapService }			from './services/map.service';
 
 @NgModule({
   declarations: [
@@ -14,8 +13,7 @@ import { MapService }			from './services/map.service';
     BrowserModule
   ],
   providers: [
-  	ProfileService,
-  	MapService
+  	ProfileService
   ],
   bootstrap: [AppComponent]
 })
