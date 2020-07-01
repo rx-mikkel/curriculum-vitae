@@ -149,21 +149,21 @@ export class ProfileService {
 				{
 					startName: 'Website',
 					endName: 'Web-software',
-					start: 24,
+					start: 38,
 					end: 0,
 					description: 'Between websites and advanced web-based software, I have specialised more in the latter.'
 				},
 				{
 					startName: '(UX) Designer',
 					endName: 'Developer',
-					start: 14,
-					end: 22,
+					start: 8,
+					end: 28,
 					description: 'Designing functionality and interaction, then implementing it as production-ready code is what I do best.'
 				},
 				{
 					startName: 'Detail',
 					endName: 'Big picture',
-					start: 25,
+					start: 45,
 					end: 0,
 					description: 'I tend to be more concerned with what I am building than how.'
 				}
