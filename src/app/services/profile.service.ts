@@ -11,7 +11,7 @@ export class ProfileService {
 			userName: 'Mikkel Ørum Skovgaard-Petersen',
 			title: 'UI designer and developer',
 			phone: '+45 2687 8061',
-			email: 'mikkeloerum@gmail.com',
+			email: 'mikkeloerum@hey.com',
 			address: 'Zincksvej 7a, Godthåb',
 			intro: [
 				'I focus on solving problems over implementing features.',
