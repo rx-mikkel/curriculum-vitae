@@ -3,12 +3,14 @@
 	background-color: $purple-bg;
 	width: 100%;
 	margin-bottom: 1.2em; 
+	border-radius: 20px;
 	box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, .4);
 }
 
 .skillInner {
 	background-color: #9de0ad;
-	height: 1em;
+	height: .8em;
+	border-radius: 20px;
 	box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .5);
 }
 
@@ -33,7 +35,8 @@
 .focusInner {
 	//background: linear-gradient(to right, rgba(206, 105, 211,.5) 0%,rgba(206, 105, 211,1) 25%, rgba(252, 55, 182,1) 50%, rgba(206, 105, 211,1) 75%,rgba(206, 105, 211,0) 100%);
 	background-color: #c717e6;
-	height: 1em;
+	height: .8em;
+	border-radius: 20px;
 	box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .1), inset 40px 0px 40px -30px rgba(200, 255, 220, .1);
 }
 
