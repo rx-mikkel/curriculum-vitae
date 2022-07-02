@@ -62,45 +62,4 @@ export class AppComponent implements OnInit {
 		let resultColor = 'rgb(' + rCalc + ', ' + gCalc + ', ' + bCalc + ')';
 		return resultColor;
 	}
-	/*
-	drawPolygon(shape) {
-		var self = this;
-
-		let polygon = this.newPolygon(shape.geometry);
-
-		polygon.setOptions(
-			{
-				fillColor: shape.color,
-				strokeColor: shape.outline,
-				zIndex: shape.zIndex,
-				clickable: false,
-				fillOpacity: shape.opacity
-			});
-
-		polygon.setMap(this.googleMap);
-
-		polygon.addListener('click', function () {
-
-		});
-	}
-
-	newPolygon(geometry) {
-		let coords = [];
-		for(let polygon of geometry.coordinates) {
-			let poly = [];
-			for (let coordinatesArray of polygon) {
-				poly.push(new google.maps.LatLng(coordinatesArray[1], coordinatesArray[0]));
-			};
-			coords.push(poly);
-		}
-
-		let polygon = new google.maps.Polygon({
-			paths: coords,
-			strokeWeight: 2,
-			fillOpacity: 1
-		});
-
-		return polygon;
-	}
-	*/
 }

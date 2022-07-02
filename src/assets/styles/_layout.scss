@@ -13,7 +13,7 @@ body {
 
 p, a {
 	font-size: 1.5em;
-	line-height: 1.6em;
+	line-height: 1.5em;
 	margin: 0em; 
 }
 
@@ -26,7 +26,7 @@ a, a:visited {
 }
 
 a:hover {
-	color: lighten($purple-link, 12%);
+	color: darken($purple-link, 16%);
 }
 
 p + p {
@@ -40,34 +40,34 @@ h1 {
 }
 
 h2 {
-	font-size: 1.6em;
-	margin: .2em 0; 
+	font-size: 1.7em;
+	margin: .4em 0; 
 }
 
 h3 {
-	font-size: 1.7em;
+	font-size: 2em;
 	font-weight: 300;
 	margin: 1em 0px;
-	margin-bottom: .2em;
+	margin-bottom: .4em;
 }
 
 h4 {
 	margin: 1.2em 0em;
 	margin-top: 0px;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	color: $blue-bg;
 	font-weight: 300; 
 }
 
 .link-button {
-	background-color: #02a556;
+	background-color: $green-bg;
 	padding: .5em 1em;
 	color: #fff !important;
 	border-radius: 50px;
 	text-decoration: none;
-	font-size: 1.6em;
+	font-size: 1.5em;
 	display: inline-block;
-	font-weight: bold;
+	font-weight: 400;
 	transition: all .4s ease;
 }
 
@@ -97,12 +97,12 @@ h4 {
 }
 
 .raised {
-	box-shadow: 3px 3px 9px 1px rgba(0,0,0,.35);
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), 3px 3px 9px 1px rgba(0,0,0,.35);
     transform: scale(1.05);
-    transition: all .2s ease;
+    transition: all .1s ease;
 
 	&:hover {
-		box-shadow: 7px 7px 14px rgba(0,0,0,.3);
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08), 7px 7px 14px rgba(0,0,0,.3);
 		transform: translate(-1px, -4px) scale(1.1);
 	}
 }
@@ -124,6 +124,7 @@ h4 {
 	margin-left: -7.5em;
 	cursor: default; 
  	background-size: cover;
+	border: 3px solid #fff;
 }
 
 .section {
@@ -194,14 +195,16 @@ h4 {
 }
 	
 .experience {
-	margin-bottom: 4em;
+	padding: 2em 0em;
+	display: flex;
+	flex-direction: column;
 
 	a {
 		color: $purple-link;
 	}
 
-	&:last-child {
-		margin-bottom: 0px;
+	& + .experience {
+		border-top: 1px solid #cfcfcf;
 	}
 }
 

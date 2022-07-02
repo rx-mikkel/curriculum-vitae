@@ -9,23 +9,34 @@ export class ProfileService {
 	getProfile() {
 		return {
 			userName: 'Mikkel Ørum Skovgaard-Petersen',
-			title: 'UI designer and developer',
+			title: 'UI designer and front-end developer',
 			phone: '+45 2687 8061',
 			email: 'mikkeloerum@hey.com',
 			address: 'Zincksvej 7a, Godthåb',
 			intro: [
-				'I focus on solving problems over implementing features.',
+				'I focus on solving problems over implementing features!',
 				'I am a designer using code as my primary tool. I build software, using the technologies that enable me to do so most efficiently. I always think about the big picture before I start coding - it is not enough to be precise, accuracy is needed too in order to build the right solution.',
 				'I focus on delivering great software that not only works well for the users, but ties in well with the overall business goals. I prefer to work closely with users to understand the challenges they face and come up with the best solutions in collaboration with them.',
 			],
 			linkedIn: 'https://www.linkedin.com/in/mikkeloerum/',
 			positions: [
 				{
+					title: 'Development Senior Specialist - Front-end',
+					company: 'AskCody',
+					period: 'Jan 2022 - Present',
+					description: [
+					],
+					links: [
+						'https://www.askcody.com/'
+					]
+				},
+				{
 					title: 'UI designer / Front-end developer',
 					company: 'Perfion',
-					period: 'Jun 2019 - Present',
+					period: 'Jun 2019 - Dec 2021',
 					description: [
-						''
+						'Design and implementation of Perfion Web.',
+						'During my time at Perfion I first spent my time understanding the entire PIM platform then re-imagined it for the web and finally implemented the UI.'
 					],
 					links: [
 						'https://www.perfion.com/'
@@ -83,6 +94,10 @@ export class ProfileService {
 			],
 			skills: [
 				{
+					name: 'UX',
+					rating: 100
+				},
+				{
 					name: 'Problem solving',
 					rating: 100
 				},
@@ -113,24 +128,24 @@ export class ProfileService {
 				{
 					name: 'Data visualisation',
 					rating: 94,
-				}
+				},
+				{
+					name: 'Web UI',
+					rating: 100
+				},
 			],
 			tools: [
 				{
-					name: 'Angular',
+					name: 'React',
 					rating: 93,
 				},
 				{
-					name: 'HTML',
-					rating: 98
+					name: 'Next.js',
+					rating: 93,
 				},
 				{
-					name: 'SASS',
-					rating: 100
-				},
-				{
-					name: 'Google Maps',
-					rating: 96
+					name: 'Angular',
+					rating: 93,
 				},
 				{
 					name: 'JavaScript',
