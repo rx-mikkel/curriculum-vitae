@@ -4,9 +4,8 @@
         <div class="section">
             <h1>{{profile.userName}}</h1>
             <div class="contact">
-                <h2>{{profile.title}}</h2>
-                <br>
-                <p>{{profile.phone}}</p>
+                <h3 style="margin-top: .5em;">{{profile.title}}</h3>
+				<br />
                 <a href="mailto:{{profile.email}}">{{profile.email}}</a>
             </div>
             <div class="column" style="padding-top: 1em;">
@@ -26,7 +25,7 @@
 		<div class="section group">
 		    <p *ngFor="let paragraph of profile.intro">{{paragraph}}</p>
 		    <br><br>
-		    <h2>Relative strength</h2>
+		    <h3>Relative strength</h3>
 		    <p>Where do I provide most value?</p>
 		    <div style="margin: 2em -2em 0px;">
 		        <div class="spectrum-div" *ngFor="let zone of profile.zones">
@@ -48,9 +47,8 @@
 		    </div>
 		    <div>
 		    	<div *ngFor="let position of profile.positions" class="experience">
-		    		<h2>{{position.title}}</h2>
-		    		<h3>{{position.company}}</h3>
-		    		<h4>{{position.period}}</h4>
+		    		<h3>{{position.title}}</h3>
+		    		<h4><span style="font-weight: 400;">{{position.company}}</span>, {{position.period}}</h4>
 		    		<p *ngFor="let paragraph of position.description">{{paragraph}}</p>
 		    		<div class="link-container" *ngFor="let link of position.links">
 		    			<a [href]="link" target="_blank">{{link}}</a>
@@ -117,7 +115,7 @@
 		        </div>
 		        <div>
 		            <div class="column">
-		                <h2 *ngFor="let activity of profile.activities">{{activity}}</h2>
+		                <h3 *ngFor="let activity of profile.activities">{{activity}}</h3>
 		            </div>
 		        </div>
 		    </div>
