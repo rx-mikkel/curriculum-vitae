@@ -136,6 +136,8 @@ h4 {
 
 .sectionHeader {
 	margin-bottom: 2em;
+	display: flex;
+	align-items: center;
 
 	a {
 		h2 {
@@ -149,7 +151,6 @@ h4 {
 		margin-right: 1em;
 		border-radius: 50%;
 		background-color: $blue-bg;
-		display: inline-flex;
 		background-position: center;
 
 		&.linkIcon {

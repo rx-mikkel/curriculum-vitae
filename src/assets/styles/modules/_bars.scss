@@ -14,13 +14,13 @@
 	box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .5);
 }
 
-.skill-tag {
+.skillTag {
 	background-color: $green-bg;
 	border-radius: 50px;
 	font-size: 1.3em;
 	padding: .4em 1em;
 	color: #fff;
-	float: left;
+	display: inline-flex;
 	margin: .2em;
 	white-space: nowrap;
 }

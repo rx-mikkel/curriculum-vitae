@@ -67,9 +67,7 @@
 		        </div>
 		        <div>
 		            <div class="column group">
-		                <div *ngFor="let skill of profile.skills">
-		                    <span class="skill-tag">{{skill.name}}</span>
-		                </div>
+		            	<div *ngFor="let skill of profile.skills" class="skillTag">{{skill.name}}</div>
 		            </div>
 		        </div>
 		    </div>
@@ -81,9 +79,7 @@
 		        </div>
 		        <div class="column">
 		        	<div class="column group">
-		                <div *ngFor="let tool of profile.tools">
-		                    <span class="skill-tag">{{tool.name}}</span>
-		                </div>
+		                <div *ngFor="let tool of profile.tools" class="skillTag">{{tool.name}}</div>
 		            </div>
 		        </div>
 		    </div>
