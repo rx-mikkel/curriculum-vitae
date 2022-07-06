@@ -30,8 +30,10 @@ a:hover {
 	color: lighten($link, 12%);
 }
 
-p + p {
-	margin-top: 1.4em;
+.textContent {
+	p + p {
+		margin-top: 1.4em;
+	}
 }
 
 h1 {

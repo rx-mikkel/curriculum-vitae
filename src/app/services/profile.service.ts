@@ -163,10 +163,10 @@ export class ProfileService {
 			zones: [
 				{
 					startName: 'Website',
-					endName: 'Web-software',
+					endName: 'Web-app',
 					start: 38,
 					end: 0,
-					description: 'Between websites and advanced web-based software, I have specialised more in the latter.'
+					description: 'Through most of my career I have built apps on the web rather than websites.'
 				},
 				{
 					startName: '(UX) Designer',

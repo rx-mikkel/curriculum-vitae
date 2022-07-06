@@ -22,15 +22,17 @@
 
 	<div class="section_left">
 		<div class="section group">
-		    <p *ngFor="let paragraph of profile.intro">{{paragraph}}</p>
+			<div class="textContent"><p *ngFor="let paragraph of profile.intro">{{paragraph}}</p></div>
+		   
 		    <br><br>
 		    <h3>Relative strength</h3>
 		    <p>Where do I provide most value?</p>
-		    <div style="margin: 2em -2em 0px;">
-		        <div class="spectrum-div" *ngFor="let zone of profile.zones">
-		        	<div style="position: absolute; top: 0px; left: 2em;"><span style="font-size: 1.5em;">{{zone.startName}}</span></div>
-					<div style="position: absolute; top: 0px; right: 2em;"><span style="font-size: 1.5em;">{{zone.endName}}</span></div>
-					
+		    <div class="spectrums">
+		        <div class="spectrumDiv" *ngFor="let zone of profile.zones">
+					<div class="spectrumCaption">
+						<p>{{zone.startName}}</p>
+						<p>{{zone.endName}}</p>
+					</div>
 					<div class="skillBar">
 						<div [style.margin-left]="zone.start + '%'" [style.margin-right]="zone.end + '%'" class="focusInner"></div>
 					</div>
@@ -45,7 +47,7 @@
 		        <h2>Experience</h2>
 		    </div>
 		    <div>
-		    	<div *ngFor="let position of profile.positions" class="experience">
+		    	<div *ngFor="let position of profile.positions" class="experience textContent">
 		    		<h3>{{position.title}}</h3>
 		    		<h4><span style="font-weight: 400;">{{position.company}}</span>, {{position.period}}</h4>
 		    		<p *ngFor="let paragraph of position.description">{{paragraph}}</p>
