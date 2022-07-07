@@ -157,6 +157,7 @@ h4 {
 
 		&.linkIcon {
 			background-color: $link;
+			display: inline-block;
 
 			&:hover {
 				background-color: lighten($link, 12%);
