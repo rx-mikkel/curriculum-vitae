@@ -23,11 +23,12 @@ export class ProfileService {
 				{
 					title: 'Development Senior Specialist - Front-end',
 					company: 'AskCody',
+					companyWebsite: 'https://www.askcody.com/',
 					period: 'Jan 2022 - Present',
 					description: [
+						'Love it here!'
 					],
 					links: [
-						'https://www.askcody.com/'
 					]
 				},
 				{
@@ -39,7 +40,6 @@ export class ProfileService {
 						'During my time at Perfion I first spent my time understanding the entire PIM platform then re-imagined it for the web and finally implemented the UI.'
 					],
 					links: [
-						'https://www.perfion.com/'
 					]
 				},
 				{

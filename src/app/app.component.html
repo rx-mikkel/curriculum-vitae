@@ -49,7 +49,10 @@
 		    <div>
 		    	<div *ngFor="let position of profile.positions" class="experience textContent">
 		    		<h3>{{position.title}}</h3>
-		    		<h4><span style="font-weight: 400;">{{position.company}}</span>, {{position.period}}</h4>
+		    		<h4>
+						<a style="font-size: 15px; font-weight: 400; color: inherit" *ngIf="position.companyWebsite" href="{{position.companyWebsite}}">{{position.company}}</a>
+						<span style="font-weight: 400;" *ngIf="!position.companyWebsite">{{position.company}}</span>, {{position.period}}
+					</h4>
 		    		<p *ngFor="let paragraph of position.description">{{paragraph}}</p>
 		    		<div class="link-container" *ngFor="let link of position.links">
 		    			<a [href]="link" target="_blank">{{link}}</a>
