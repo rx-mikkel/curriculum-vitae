@@ -78,9 +78,10 @@ h4 {
 
 /* Layout */
 .wrap {
-	width: 100%;
+	display: flex;
+	flex: 1;
 	min-width: 30em;
-	max-width: 72em; 
+	max-width: 96em; 
 }
 
 .header {
@@ -90,6 +91,21 @@ h4 {
 	border-bottom: 1px solid rgba(0,0,0,.15);
 	margin-bottom: 6em;
 	box-shadow: inset 0px -4px 12px -6px rgba(0,0,0,.15);
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	position: relative;
+	padding-bottom: 7.5em;
+}
+
+.main {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+}
+
+.main-layout {
+	flex-direction: column;
 }
 
 .linked-in {
@@ -129,6 +145,10 @@ h4 {
 	border-radius: 50%;
  	background-size: cover;
 	border: 3px solid #fff;
+	position: absolute;
+	bottom: -7.5em;
+	left: 50%;
+	margin-left: -7.5em;
 }
 
 .section {
@@ -221,33 +241,18 @@ h4 {
 	h2 {
 		font-size: 2.2em;
 	}	
-	
-	.section_right {
-		.section {
-			width: 50%;
-			float: left;
-		}
+
+	.section_right .section {
+		width: 50%;
+		display: inline-flex;
+		flex-direction: column;
 	}
 
-    .hidden-full {
-
-	    .section {
-	    	float: left;
-	    	width: 50%;
-	    }
-
-    	.column {
-    		width: 100%;
-    	}
-    }
 }
 /* ==========================================================================
    Over 720 width
    ========================================================================== */
 @media screen and (min-width: 720px) {
-  .wrap {
-		margin: 0em auto; 
-	}
 
 	.footer {
 		background-image: linear-gradient(43deg, #bb2fb2 0%, #610766 46%, #32aaf0 100%);
@@ -256,18 +261,25 @@ h4 {
 /* ==========================================================================
    Over 980 width
    ========================================================================== */
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 800px) {
 	.wrap {
-		max-width: 96em; 
+		padding: 0 2em;
+
+		&.main-layout {
+			flex-direction: row;
+		}
+
+		.section_left, .section_right {
+			display: inline-flex;
+			flex-direction: column;
+		}
 
 		.section_right {
-			float: right;
-			width: 32em;
+			flex: 1;
 			padding-left: 4em;
 
 			.section {
 				width: 100%;
-				float: none;
 			}
 		}
 
@@ -276,16 +288,11 @@ h4 {
 		}
 
 		.section_left {
-			float: left;
-			width: 64em; 
+			flex: 2;
 
 			.column {
 				width: 50%; 
 			}
-		}
-
-		.column {
-			width: 100%; 
 		}
 	}
 }
@@ -296,14 +303,6 @@ h4 {
 
 .hidden {
 	display: none !important;
-	visibility: hidden; 
-}
-
-.group:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
 	visibility: hidden; 
 }
 
