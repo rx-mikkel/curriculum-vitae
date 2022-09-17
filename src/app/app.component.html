@@ -45,7 +45,7 @@
 					<div class="icon" style="background-image: url(assets/images/experience.png);"></div>
 					<h2>Experience</h2>
 				</div>
-				<div>
+				<div *ngIf="showAllPositions">
 					<div *ngFor="let position of profile.positions" class="experience textContent">
 						<h3>{{position.title}}</h3>
 						<h4>
@@ -57,6 +57,22 @@
 							<a [href]="link" target="_blank">{{link}}</a>
 						</div>
 					</div>
+				</div>
+				<div *ngIf="!showAllPositions">
+					<div *ngFor="let position of profile.positions.slice(0,3)" class="experience textContent">
+						<h3>{{position.title}}</h3>
+						<h4>
+							<a style="font-size: 15px; font-weight: 400; color: inherit" *ngIf="position.companyWebsite" href="{{position.companyWebsite}}">{{position.company}}</a>
+							<span style="font-weight: 400;" *ngIf="!position.companyWebsite">{{position.company}}</span>, {{position.period}}
+						</h4>
+						<p *ngFor="let paragraph of position.description">{{paragraph}}</p>
+						<div class="link-container" *ngFor="let link of position.links">
+							<a [href]="link" target="_blank">{{link}}</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<button class="raised btn-secondary" (click)="toggleAllPositions();">{{showAllPositions ? 'Show less' : 'Show all'}}</button>
 				</div>
 			</div>
 

@@ -1,16 +1,16 @@
 ﻿.skillBar {
-	border: 1px solid rgba(37, 112, 126, 0.4);
-	background-color: darken($link, 10%);
+	border: 1px solid $link;
+	background-color: $link;
 	margin-bottom: 1.2em; 
 	border-radius: 20px;
 	overflow: hidden;
-	box-shadow: inset 0px 10px 20px -10px rgba(0, 0, 0, .4);
+	box-shadow: inset 0px 4px 9px -5px rgba(0, 0, 0, .8);
 }
 
 .skillInner {
 	background-color: #9de0ad;
 	height: .8em;
-	box-shadow: inset -40px 0px 40px -30px rgba(200, 255, 220, .5);
+	box-shadow: inset -40px 0px 56px -30px rgba(200, 255, 220, .8);
 }
 
 .skillTag {
@@ -43,7 +43,7 @@
 }
 
 .focusInner {
-	background-color: #c717e6;
+	background-color: #fd30a8;
 	height: .8em;
 }
 

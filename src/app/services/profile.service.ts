@@ -163,8 +163,8 @@ export class ProfileService {
 			zones: [
 				{
 					startName: 'Website',
-					endName: 'Web-app',
-					start: 38,
+					endName: 'App (SAAS)',
+					start: 58,
 					end: 0,
 					description: 'Through most of my career I have built apps on the web rather than websites.'
 				},
@@ -172,13 +172,13 @@ export class ProfileService {
 					startName: '(UX) Designer',
 					endName: 'Developer',
 					start: 8,
-					end: 28,
-					description: 'Designing functionality and interaction, then implementing it as production-ready code is what I do best.'
+					end: 18,
+					description: 'Designing functionality and interaction, then implementing.'
 				},
 				{
 					startName: 'Detail',
-					endName: 'Big picture',
-					start: 45,
+					endName: 'Big picture, strategy',
+					start: 42,
 					end: 0,
 					description: 'I tend to be more concerned with what I am building than how.'
 				}

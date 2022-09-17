@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 		blue: 126
 	};
 
-	
+	showAllPositions: boolean = false;
 
 	constructor(
 		private profileService: ProfileService
@@ -37,6 +37,9 @@ export class AppComponent implements OnInit {
 		this.setSkillColors();
 	}
 
+	toggleAllPositions() {
+		this.showAllPositions = !this.showAllPositions;
+	}
 
 	setSkillColors() {
 		for(let skill of this.profile.skills) {
