@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
 		}
 	}
 
-	calculateColor(percentage) {
+	calculateColor(percentage: number) {
 		let pct = percentage / 100;
 
 		let rCalc = Math.round((this.color2.red * (1 - pct)) + (this.color1.red * pct));
