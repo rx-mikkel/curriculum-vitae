@@ -23,7 +23,7 @@ p a {
 }
 
 a, a:visited {
-	color: darken($link, 6%);
+	color: $link;
 }
 
 a:hover {
@@ -64,25 +64,7 @@ h4 {
 	font-weight: 300; 
 }
 
-.link-button {
-	background-color: $green-bg;
-	padding: .5em 1em;
-	color: #fff !important;
-	border-radius: 50px;
-	text-decoration: none;
-	font-size: 1.5em;
-	display: inline-block;
-	font-weight: 400;
-	transition: all .4s ease;
-}
-
 /* Layout */
-.wrap {
-	display: flex;
-	flex: 1;
-	min-width: 30em;
-	max-width: 96em; 
-}
 
 .header {
 	background-color: #610766;
@@ -106,6 +88,13 @@ h4 {
 
 .main-layout {
 	flex-direction: column;
+}
+
+.wrap {
+	display: flex;
+	flex: 1;
+	min-width: 30em;
+	max-width: 96em; 
 }
 
 .btn {

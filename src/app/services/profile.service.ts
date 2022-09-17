@@ -5,7 +5,7 @@ export class ProfileService {
 
 	constructor() { }
 
-	// ideally this comes from a http-request, for now mock-data
+	// ideally this comes from a http-request but I am not that kind of girl
 	getProfile() {
 		return {
 			userName: 'Mikkel Ørum Skovgaard-Petersen',
@@ -26,7 +26,7 @@ export class ProfileService {
 					companyWebsite: 'https://www.askcody.com/',
 					period: 'Jan 2022 - Present',
 					description: [
-						'Love it here!'
+						'Primarily working on the next generation of the AskCody platform for meeting management.'
 					],
 					links: [
 					]
@@ -122,7 +122,7 @@ export class ProfileService {
 					rating: 68
 				},
 				{
-					name: 'Responsive webdesign',
+					name: 'Responsive',
 					rating: 94,
 				},
 				{
@@ -130,8 +130,8 @@ export class ProfileService {
 					rating: 94,
 				},
 				{
-					name: 'Web UI',
-					rating: 100
+					name: 'Strategy',
+					rating: 94,
 				},
 			],
 			tools: [
@@ -166,7 +166,7 @@ export class ProfileService {
 					endName: 'App (SAAS)',
 					start: 58,
 					end: 0,
-					description: 'Through most of my career I have built apps on the web rather than websites.'
+					description: 'Through most of my career I have built web-software rather than websites.'
 				},
 				{
 					startName: '(UX) Designer',
@@ -197,7 +197,7 @@ export class ProfileService {
 					rating: 54
 				}
 			],
-			activities: ['Play with my kids', 'Archery', 'Bicycling', 'Woodworking']
+			activities: ['Play with my kids', 'Archery', 'Bicycling', 'Woodworking', 'Learning']
 		}
 	}
 
